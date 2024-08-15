@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import HomePage from './components/Home';
+import NextPage from './components/NextPage';
+import Navbar from './components/Navbar';
+import LoadingBar from 'react-top-loading-bar';
+import About from './components/About'; // Import About component
 
-function App() {
+const App = () => {
+  const [progress, setProgress] = useState(0);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <LoadingBar
+        height={3}
+        color='#f11946'
+        progress={progress}
+      />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/next-page" element={
+          <>
+            <Navbar />
+            <NextPage />
+          </>
+        } />
+        <Route path="/about" element={
+          <About setProgress={setProgress} />
+        } />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
