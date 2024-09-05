@@ -3,10 +3,10 @@ import { motion } from 'framer-motion';
 
 // Social media and contact information
 const contactInfo = {
-  github: "https://github.com/your-username",
-  linkedin: "https://www.linkedin.com/in/your-profile/",
+  github: "https://github.com/ProfessorAyush",
+  linkedin: "https://www.linkedin.com/in/ayush-aggarwal-4a56b6230/",
   email: "mailto:mailayush1234@gmail.com",
-  instagram: "https://www.instagram.com/your-profile/",
+  instagram: "https://www.instagram.com/ayushbania_/",
 };
 
 const Contact = () => {

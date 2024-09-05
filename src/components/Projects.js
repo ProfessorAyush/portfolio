@@ -4,8 +4,8 @@ import { motion } from 'framer-motion';
 
 const projects = [
   {
-    title: "Astro Explorer",
-    description: "Explore the cosmos with this interactive web app. Search and view detailed information about planets, stars, and galaxies.",
+    title: "Ashprint",
+    description: "Ashprint is an innovative automatic printing solution designed using a Raspberry Pi and Python. This project automates the entire printing process, eliminating the need for manual intervention in managing print jobs",
     image: "https://via.placeholder.com/400x300?text=Astro+Explorer",
     link: "#",
   },

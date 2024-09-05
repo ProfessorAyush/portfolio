@@ -13,7 +13,7 @@ const Navbar = () => {
   };
 
   const handleReload = () => {
-    window.location.reload(); // Reloads the page
+     // Reloads the page
   };
 
   return (
