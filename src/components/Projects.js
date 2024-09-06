@@ -1,16 +1,16 @@
-// Projects.js
 import React from 'react';
 import { motion } from 'framer-motion';
+import image1 from './image1.png';
 
 const projects = [
   {
     title: "Ashprint",
     description: "Ashprint is an innovative automatic printing solution designed using a Raspberry Pi and Python. This project automates the entire printing process, eliminating the need for manual intervention in managing print jobs",
-    image: "https://via.placeholder.com/400x300?text=Astro+Explorer",
-    link: "#",
+    image: image1,
+    link: "https://ashprint-frontend.onrender.com/",
   },
   {
-    title: "TaskMaster",
+    title: "NewsMoneky",
     description: "An advanced productivity tool for managing tasks with features like to-do lists, reminders, and progress tracking.",
     image: "https://via.placeholder.com/400x300?text=TaskMaster",
     link: "#",
@@ -31,14 +31,23 @@ const ProjectCard = ({ project }) => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
     >
-      <img
-        src={project.image}
-        alt={project.title}
-        className="w-full h-48 object-cover rounded-lg mb-4 transition-transform transform hover:scale-110"
-      />
-      <h3 className="text-3xl font-extrabold mb-2 text-teal-400">{project.title}</h3>
+      <a href={project.link} target="_blank" rel="noopener noreferrer">
+        <img
+          src={project.image}
+          alt={project.title}
+          className="w-full h-48 object-cover rounded-lg mb-4 transition-transform transform hover:scale-110"
+        />
+        <h3 className="text-3xl font-extrabold mb-2 text-teal-400">{project.title}</h3>
+      </a>
       <p className="text-gray-300 mb-4">{project.description}</p>
-      <span className="absolute bottom-4 left-4 text-gray-500">Deploying Soon</span>
+      <a 
+        href={project.link} 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="absolute bottom-4 left-4 text-teal-400 hover:text-teal-300 transition-colors"
+      >
+        Go to Project
+      </a>
     </motion.div>
   );
 };
