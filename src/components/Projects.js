@@ -1,6 +1,6 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import image1 from './image1.png';
+import doubleprofit from './doubleprofit.png';
 
 const projects = [
   {
@@ -16,10 +16,10 @@ const projects = [
     link: "#",
   },
   {
-    title: "PhotoGenius",
+    title: "ProfitDouble",
     description: "AI-driven photo editing software that enhances images with advanced filters and editing tools.",
-    image: "https://via.placeholder.com/400x300?text=PhotoGenius",
-    link: "#",
+    image: doubleprofit,
+    link: "https://profitdouble.in/",
   },
 ];
 
